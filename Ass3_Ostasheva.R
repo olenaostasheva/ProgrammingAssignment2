@@ -1,5 +1,7 @@
-#Assignment 3 - Inverse matrix
+#Assignment 2 - Inverse matrix
 
+
+#Function 1
 makeCacheMatrix <- function(x=matrix()){
         inver<-NULL
         setinv<-function(y) {
@@ -11,7 +13,7 @@ makeCacheMatrix <- function(x=matrix()){
         get_inverse<-function() inver
         list(set=set, get=get, set_inverse=set_inverse, get_inverse=get_inverse)
 }
-
+#Function 2
 
 cacheSolve<-function(x, ...){
         inver<-x$get_inverse()
@@ -25,8 +27,3 @@ cacheSolve<-function(x, ...){
         inver
 }
 
-x = rbind(c(1, -1/4), c(-1/4, 1))
-m = makeCacheMatrix(x)
-m$get()
-
-cacheSolve(m)
